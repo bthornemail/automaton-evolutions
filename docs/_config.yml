@@ -1,0 +1,63 @@
+# Site settings
+title: Automaton Evolutions
+description: Canonical automaton CanvasL data files for self-referential systems (A₀-A₁₁)
+baseurl: "/automaton-evolutions"
+url: "https://bthornemail.github.io"
+
+# Repository
+repository: "bthornemail/automaton-evolutions"
+github:
+  repository_url: https://github.com/bthornemail/automaton-evolutions
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Theme (using minima theme)
+theme: minima
+
+# Navigation
+navigation:
+  - title: Overview
+    url: /automaton-evolutions/
+  - title: Files
+    url: /automaton-evolutions/files/
+  - title: API Reference
+    url: /automaton-evolutions/api/
+  - title: Examples
+    url: /automaton-evolutions/examples/
+
+# Exclude files and directories
+exclude:
+  - "node_modules"
+  - "*.log"
+  - ".git"
+  - ".gitignore"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "vendor"
+  - "dist"
+  - "src"
+  - "tsconfig.json"
+  - "package.json"
+  - "package-lock.json"
+  - "*.tgz"
+
+# Include files
+include:
+  - "_pages"
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Minima theme settings
+minima:
+  social_links:
+    github: bthornemail
+

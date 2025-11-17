@@ -30,7 +30,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
-  }
+    "url": "https://github.com/bthornemail/automaton-evolutions.git"
+  },
+  "homepage": "https://bthornemail.github.io/automaton-evolutions/"
 }
 
