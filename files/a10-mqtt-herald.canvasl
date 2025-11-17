@@ -1,0 +1,15 @@
+@version 1.0.0
+@schema a10-mqtt-herald-v1
+
+{"id": "a10-mqtt-herald", "type": "automaton", "dimension": "10D", "role": "10D peer discovery and signaling (MQTT)", "description": "Peer discovery and signaling via MQTT broker", "bipartite": {"partition": "system", "dimension": "10D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "mqtt"}}, "metadata": {"regenerate": {"function": "r5rs:mqtt-connect", "args": ["brokerUrl", "clientId"]}}}
+
+{"id": "a10-mqtt-client", "type": "component", "dimension": "10D", "description": "MQTTClient for broker connections and messaging", "bipartite": {"partition": "system", "dimension": "10D", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "mqtt"}}, "metadata": {"regenerate": {"function": "r5rs:create-mqtt-client", "args": ["brokerUrl", "clientId"]}}}
+
+{"id": "a10-discovery-topic", "type": "topic", "dimension": "10D", "description": "MQTT topic for peer discovery announcements", "bipartite": {"partition": "system", "dimension": "10D", "bqf": {"coefficients": [1,0,1], "form": "x² + 1", "signature": "topic"}}, "metadata": {"regenerate": {"function": "r5rs:subscribe-topic", "args": ["topic", "callback"]}}}
+
+{"id": "a10-signaling-protocol", "type": "protocol", "dimension": "10D", "description": "Signaling protocol for WebRTC offer/answer exchange", "bipartite": {"partition": "system", "dimension": "10D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "signaling"}}, "metadata": {"regenerate": {"function": "r5rs:signal-webrtc", "args": ["offer", "answer", "iceCandidate"]}}}
+
+{"id": "link:a10-mqtt-herald→a9-webrtc-messenger", "type": "edge", "fromNode": "a10-mqtt-herald", "toNode": "a9-webrtc-messenger", "label": "depends", "bipartite": {"type": "vertical", "mapping": "10D→9D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "dependency"}}, "metadata": {"file": "a9-webrtc-messenger.canvasl"}}
+
+{"id": "link:a10-mqtt-herald→a10-mqtt-client", "type": "edge", "fromNode": "a10-mqtt-herald", "toNode": "a10-mqtt-client", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a10-mqtt-herald", "a10-mqtt-client"]}}}
+

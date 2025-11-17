@@ -1,0 +1,15 @@
+@version 1.0.0
+@schema a6-homology-checker-v1
+
+{"id": "a6-homology-checker", "type": "automaton", "dimension": "6D", "role": "6D ∂² = 0 homology validation", "description": "Validates chain complex homology property ∂² = 0", "bipartite": {"partition": "topology", "dimension": "6D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "homology"}}, "metadata": {"regenerate": {"function": "r5rs:validate-homology", "args": ["chain-complex"]}}}
+
+{"id": "a6-homology-validator", "type": "component", "dimension": "6D", "description": "HomologyValidator for checking ∂² = 0 property", "bipartite": {"partition": "topology", "dimension": "6D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "validation"}}, "metadata": {"regenerate": {"function": "r5rs:create-homology-validator", "args": ["chain-complex"]}}}
+
+{"id": "a6-betti-computation", "type": "operation", "dimension": "6D", "description": "Computes Betti numbers for homology groups", "bipartite": {"partition": "topology", "dimension": "6D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "betti"}}, "metadata": {"regenerate": {"function": "r5rs:compute-betti", "args": ["chain-complex", "dimension"]}}}
+
+{"id": "a6-boundary-operator", "type": "operator", "dimension": "6D", "description": "Boundary operator ∂ for chain complexes", "bipartite": {"partition": "topology", "dimension": "6D", "bqf": {"coefficients": [1,0,1], "form": "x² + 1", "signature": "boundary"}}, "metadata": {"regenerate": {"function": "r5rs:boundary-operator", "args": ["cell", "dimension"]}}}
+
+{"id": "link:a6-homology-checker→a5-sheaf-gluer", "type": "edge", "fromNode": "a6-homology-checker", "toNode": "a5-sheaf-gluer", "label": "depends", "bipartite": {"type": "vertical", "mapping": "6D→5D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "dependency"}}, "metadata": {"file": "a5-sheaf-gluer.canvasl"}}
+
+{"id": "link:a6-homology-checker→a6-homology-validator", "type": "edge", "fromNode": "a6-homology-checker", "toNode": "a6-homology-validator", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a6-homology-checker", "a6-homology-validator"]}}}
+

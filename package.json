@@ -1,0 +1,36 @@
+{
+  "name": "automaton-evolutions",
+  "version": "1.0.0",
+  "description": "Canonical automaton CanvasL data files for self-referential systems (A₀-A₁₁)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "files",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./files/*": "./files/*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "automaton",
+    "canvasl",
+    "self-referential",
+    "metaverse",
+    "topology"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
+

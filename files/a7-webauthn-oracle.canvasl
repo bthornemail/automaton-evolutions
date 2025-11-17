@@ -1,0 +1,15 @@
+@version 1.0.0
+@schema a7-webauthn-oracle-v1
+
+{"id": "a7-webauthn-oracle", "type": "automaton", "dimension": "7D", "role": "7D biometric identity and authentication", "description": "WebAuthn credential management and biometric authentication", "bipartite": {"partition": "system", "dimension": "7D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "biometric"}}, "metadata": {"regenerate": {"function": "r5rs:webauthn-register", "args": ["username", "userId"]}}}
+
+{"id": "a7-webauthn-manager", "type": "component", "dimension": "7D", "description": "WebAuthnManager for credential creation and verification", "bipartite": {"partition": "system", "dimension": "7D", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "webauthn"}}, "metadata": {"regenerate": {"function": "r5rs:create-webauthn-manager", "args": ["rpId", "rpName"]}}}
+
+{"id": "a7-credential-storage", "type": "storage", "dimension": "7D", "description": "Storage for WebAuthn credentials", "bipartite": {"partition": "system", "dimension": "7D", "bqf": {"coefficients": [1,0,1], "form": "x² + 1", "signature": "storage"}}, "metadata": {"regenerate": {"function": "r5rs:store-credential", "args": ["credentialId", "credential"]}}}
+
+{"id": "a7-authentication-flow", "type": "protocol", "dimension": "7D", "description": "WebAuthn authentication flow", "bipartite": {"partition": "system", "dimension": "7D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "authentication"}}, "metadata": {"regenerate": {"function": "r5rs:authenticate-webauthn", "args": ["userId", "challenge"]}}}
+
+{"id": "link:a7-webauthn-oracle→a6-homology-checker", "type": "edge", "fromNode": "a7-webauthn-oracle", "toNode": "a6-homology-checker", "label": "depends", "bipartite": {"type": "vertical", "mapping": "7D→6D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "dependency"}}, "metadata": {"file": "a6-homology-checker.canvasl"}}
+
+{"id": "link:a7-webauthn-oracle→a7-webauthn-manager", "type": "edge", "fromNode": "a7-webauthn-oracle", "toNode": "a7-webauthn-manager", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a7-webauthn-oracle", "a7-webauthn-manager"]}}}
+

@@ -1,0 +1,37 @@
+@version 1.0.0
+@schema a11-master-v1
+
+{"id": "a11-master", "type": "automaton", "dimension": "11D", "role": "11D Master Coordinator (A₁₁ Lie Algebra)", "description": "Master coordinator for all A₀-A₁₀ automata, swarm management", "bipartite": {"partition": "system", "dimension": "11D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "master"}}, "metadata": {"regenerate": {"function": "r5rs:elect-master", "args": ["automata", "consensus"]}}}
+
+{"id": "a11-swarm-coordinator", "type": "component", "dimension": "11D", "description": "A11Swarm coordinator for managing all automata", "bipartite": {"partition": "system", "dimension": "11D", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "coordination"}}, "metadata": {"regenerate": {"function": "r5rs:create-swarm", "args": ["automata", "config"]}}}
+
+{"id": "a11-message-routing", "type": "operation", "dimension": "11D", "description": "Message routing between automata", "bipartite": {"partition": "system", "dimension": "11D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "routing"}}, "metadata": {"regenerate": {"function": "r5rs:route-message", "args": ["from", "to", "message"]}}}
+
+{"id": "a11-tick-coordination", "type": "operation", "dimension": "11D", "description": "Tick-based coordination loop for all automata", "bipartite": {"partition": "system", "dimension": "11D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"regenerate": {"function": "r5rs:tick-swarm", "args": ["swarm", "interval"]}}}
+
+{"id": "a11-master-election", "type": "protocol", "dimension": "11D", "description": "Master election protocol for A₁₁ coordinator", "bipartite": {"partition": "system", "dimension": "11D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "election"}}, "metadata": {"regenerate": {"function": "r5rs:elect-master", "args": ["candidates", "votes"]}}}
+
+{"id": "link:a11-master→a0-unified-automaton", "type": "edge", "fromNode": "a11-master", "toNode": "a0-unified-automaton", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→0D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a0-unified-automaton.canvasl"}}
+
+{"id": "link:a11-master→a1-automaton-kernel-seed", "type": "edge", "fromNode": "a11-master", "toNode": "a1-automaton-kernel-seed", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→1D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a1-automaton-kernel-seed.canvasl"}}
+
+{"id": "link:a11-master→a2-metaverse-shape", "type": "edge", "fromNode": "a11-master", "toNode": "a2-metaverse-shape", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→2D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a2-metaverse-shape.canvasl"}}
+
+{"id": "link:a11-master→a3-metaverse-centroid", "type": "edge", "fromNode": "a11-master", "toNode": "a3-metaverse-centroid", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→3D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a3-metaverse-centroid.canvasl"}}
+
+{"id": "link:a11-master→a4-autonomous-basis", "type": "edge", "fromNode": "a11-master", "toNode": "a4-autonomous-basis", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→4D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a4-autonomous-basis.canvasl"}}
+
+{"id": "link:a11-master→a5-sheaf-gluer", "type": "edge", "fromNode": "a11-master", "toNode": "a5-sheaf-gluer", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→5D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a5-sheaf-gluer.canvasl"}}
+
+{"id": "link:a11-master→a6-homology-checker", "type": "edge", "fromNode": "a11-master", "toNode": "a6-homology-checker", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→6D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a6-homology-checker.canvasl"}}
+
+{"id": "link:a11-master→a7-webauthn-oracle", "type": "edge", "fromNode": "a11-master", "toNode": "a7-webauthn-oracle", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→7D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a7-webauthn-oracle.canvasl"}}
+
+{"id": "link:a11-master→a8-bip32-keymaster", "type": "edge", "fromNode": "a11-master", "toNode": "a8-bip32-keymaster", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→8D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a8-bip32-keymaster.canvasl"}}
+
+{"id": "link:a11-master→a9-webrtc-messenger", "type": "edge", "fromNode": "a11-master", "toNode": "a9-webrtc-messenger", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→9D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a9-webrtc-messenger.canvasl"}}
+
+{"id": "link:a11-master→a10-mqtt-herald", "type": "edge", "fromNode": "a11-master", "toNode": "a10-mqtt-herald", "label": "coordinates", "bipartite": {"type": "vertical", "mapping": "11D→10D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "coordination"}}, "metadata": {"file": "a10-mqtt-herald.canvasl"}}
+
+{"id": "link:a11-master→a11-swarm-coordinator", "type": "edge", "fromNode": "a11-master", "toNode": "a11-swarm-coordinator", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a11-master", "a11-swarm-coordinator"]}}}
+

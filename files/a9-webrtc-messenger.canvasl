@@ -1,0 +1,15 @@
+@version 1.0.0
+@schema a9-webrtc-messenger-v1
+
+{"id": "a9-webrtc-messenger", "type": "automaton", "dimension": "9D", "role": "9D P2P communication (WebRTC)", "description": "Peer-to-peer communication via WebRTC data channels", "bipartite": {"partition": "system", "dimension": "9D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "webrtc"}}, "metadata": {"regenerate": {"function": "r5rs:webrtc-connect", "args": ["peerId", "iceServers"]}}}
+
+{"id": "a9-webrtc-manager", "type": "component", "dimension": "9D", "description": "WebRTCManager for peer connections and data channels", "bipartite": {"partition": "system", "dimension": "9D", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "webrtc"}}, "metadata": {"regenerate": {"function": "r5rs:create-webrtc-manager", "args": ["localPeerId", "iceServers"]}}}
+
+{"id": "a9-data-channel", "type": "channel", "dimension": "9D", "description": "WebRTC data channel for message transmission", "bipartite": {"partition": "system", "dimension": "9D", "bqf": {"coefficients": [1,0,1], "form": "x² + 1", "signature": "channel"}}, "metadata": {"regenerate": {"function": "r5rs:create-data-channel", "args": ["peerConnection", "channelName"]}}}
+
+{"id": "a9-ice-negotiation", "type": "protocol", "dimension": "9D", "description": "ICE candidate negotiation for NAT traversal", "bipartite": {"partition": "system", "dimension": "9D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "ice"}}, "metadata": {"regenerate": {"function": "r5rs:negotiate-ice", "args": ["offer", "answer", "candidates"]}}}
+
+{"id": "link:a9-webrtc-messenger→a8-bip32-keymaster", "type": "edge", "fromNode": "a9-webrtc-messenger", "toNode": "a8-bip32-keymaster", "label": "depends", "bipartite": {"type": "vertical", "mapping": "9D→8D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "dependency"}}, "metadata": {"file": "a8-bip32-keymaster.canvasl"}}
+
+{"id": "link:a9-webrtc-messenger→a9-webrtc-manager", "type": "edge", "fromNode": "a9-webrtc-messenger", "toNode": "a9-webrtc-manager", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a9-webrtc-messenger", "a9-webrtc-manager"]}}}
+

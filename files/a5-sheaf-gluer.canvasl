@@ -1,0 +1,17 @@
+@version 1.0.0
+@schema a5-sheaf-gluer-v1
+
+{"id": "a5-sheaf-gluer", "type": "automaton", "dimension": "5D", "role": "5D MetaLogNode DAG federation", "description": "Federation via MetaLogNode DAG and sheaf gluing", "bipartite": {"partition": "system", "dimension": "5D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "federation"}}, "metadata": {"regenerate": {"function": "r5rs:glue-sheaf", "args": ["a4-autonomous-basis", "metalog-node-dag"]}}}
+
+{"id": "a5-metalog-node-manager", "type": "component", "dimension": "5D", "description": "MetaLogNodeManager for creating and managing MetaLogNodes", "bipartite": {"partition": "system", "dimension": "5D", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "management"}}, "metadata": {"regenerate": {"function": "r5rs:create-metalog-node", "args": ["content", "parent"]}}}
+
+{"id": "a5-dag-manager", "type": "component", "dimension": "5D", "description": "DAGManager for managing directed acyclic graph structures", "bipartite": {"partition": "system", "dimension": "5D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "dag"}}, "metadata": {"regenerate": {"function": "r5rs:build-dag", "args": ["nodes", "edges"]}}}
+
+{"id": "a5-federation-protocol", "type": "protocol", "dimension": "5D", "description": "Federation protocol for gluing sheaves across peers", "bipartite": {"partition": "system", "dimension": "5D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "federation"}}, "metadata": {"regenerate": {"function": "r5rs:federate-sheaf", "args": ["local-sheaf", "remote-sheaf"]}}}
+
+{"id": "link:a5-sheaf-gluer→a4-autonomous-basis", "type": "edge", "fromNode": "a5-sheaf-gluer", "toNode": "a4-autonomous-basis", "label": "depends", "bipartite": {"type": "vertical", "mapping": "5D→4D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "dependency"}}, "metadata": {"file": "a4-autonomous-basis.canvasl"}}
+
+{"id": "link:a5-sheaf-gluer→a5-metalog-node-manager", "type": "edge", "fromNode": "a5-sheaf-gluer", "toNode": "a5-metalog-node-manager", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a5-sheaf-gluer", "a5-metalog-node-manager"]}}}
+
+{"id": "link:a5-sheaf-gluer→a5-dag-manager", "type": "edge", "fromNode": "a5-sheaf-gluer", "toNode": "a5-dag-manager", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a5-sheaf-gluer", "a5-dag-manager"]}}}
+

@@ -1,0 +1,15 @@
+@version 1.0.0
+@schema a8-bip32-keymaster-v1
+
+{"id": "a8-bip32-keymaster", "type": "automaton", "dimension": "8D", "role": "8D HD wallet and cryptographic addressing", "description": "Hierarchical deterministic wallet operations using BIP-32/39/44", "bipartite": {"partition": "system", "dimension": "8D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "cryptographic"}}, "metadata": {"regenerate": {"function": "r5rs:bip32-derive", "args": ["mnemonic", "path"]}}}
+
+{"id": "a8-bip32-wallet", "type": "component", "dimension": "8D", "description": "BIP32Wallet for HD wallet operations", "bipartite": {"partition": "system", "dimension": "8D", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "wallet"}}, "metadata": {"regenerate": {"function": "r5rs:create-bip32-wallet", "args": ["mnemonic"]}}}
+
+{"id": "a8-key-derivation", "type": "operation", "dimension": "8D", "description": "Key derivation from BIP-32 paths", "bipartite": {"partition": "system", "dimension": "8D", "bqf": {"coefficients": [1,2,1], "form": "x² + 2xy + y²", "signature": "derivation"}}, "metadata": {"regenerate": {"function": "r5rs:derive-key", "args": ["path", "mnemonic"]}}}
+
+{"id": "a8-signature-generation", "type": "operation", "dimension": "8D", "description": "Message signing with derived keys", "bipartite": {"partition": "system", "dimension": "8D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "signing"}}, "metadata": {"regenerate": {"function": "r5rs:sign-message", "args": ["path", "message", "mnemonic"]}}}
+
+{"id": "link:a8-bip32-keymaster→a7-webauthn-oracle", "type": "edge", "fromNode": "a8-bip32-keymaster", "toNode": "a7-webauthn-oracle", "label": "depends", "bipartite": {"type": "vertical", "mapping": "8D→7D", "bqf": {"coefficients": [1,1,1], "form": "x² + xy + y²", "signature": "dependency"}}, "metadata": {"file": "a7-webauthn-oracle.canvasl"}}
+
+{"id": "link:a8-bip32-keymaster→a8-bip32-wallet", "type": "edge", "fromNode": "a8-bip32-keymaster", "toNode": "a8-bip32-wallet", "label": "uses", "bipartite": {"type": "horizontal", "mapping": "automaton→component", "bqf": {"coefficients": [1,1,0], "form": "x² + xy", "signature": "usage"}}, "metadata": {"regenerate": {"function": "r5rs:link-automaton-to-component", "args": ["a8-bip32-keymaster", "a8-bip32-wallet"]}}}
+
