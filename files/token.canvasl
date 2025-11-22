@@ -1,0 +1,30 @@
+@version 1.0
+@schema token-v1
+@dimension 0D
+@branch 01-ontology
+
+{"id":"Encrypt", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Decrypt", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Sign", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Verify", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Signature", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Address", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Wallet", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Token", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Transaction", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Account", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Ledger", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Blockchain", "type":"node", "encoding":"Typescript", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+
+{"id":"edge:Signature→Transaction", "type":"edge", "fromNode":"Signature", "toNode":"Transaction", "bipartite":{"type":"horizontal", "mapping":"signature→transaction", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Token→Transaction", "type":"edge", "fromNode":"Token", "toNode":"Transaction", "bipartite":{"type":"horizontal", "mapping":"token→transaction", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Transaction→Account", "type":"edge", "fromNode":"Transaction", "toNode":"Account", "bipartite":{"type":"horizontal", "mapping":"transaction→account", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Account→Ledger", "type":"edge", "fromNode":"Account", "toNode":"Ledger", "bipartite":{"type":"horizontal", "mapping":"account→ledger", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Ledger→Blockchain", "type":"edge", "fromNode":"Ledger", "toNode":"Blockchain", "bipartite":{"type":"horizontal", "mapping":"ledger→blockchain", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Sign→Wallet", "type":"edge", "fromNode":"Sign", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"sign→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Verify→Wallet", "type":"edge", "fromNode":"Verify", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"verify→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Encrypt→Wallet", "type":"edge", "fromNode":"Encrypt", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"encrypt→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Decrypt→Wallet", "type":"edge", "fromNode":"Decrypt", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"decrypt→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Wallet→Address", "type":"edge", "fromNode":"Wallet", "toNode":"Address", "bipartite":{"type":"horizontal", "mapping":"wallet→address", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Address→Blockchain", "type":"edge", "fromNode":"Address", "toNode":"Blockchain", "bipartite":{"type":"horizontal", "mapping":"address→blockchain", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+

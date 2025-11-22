@@ -1,0 +1,9 @@
+@version 1.0
+@schema metaverse-shape-v1
+@dimension 8D
+
+{"id":"8D-affine", "type":"manifold", "dimension":8, "coordinates":["Port","Pair","Boolean","Symbol","Number","Char","String","Vector","Procedure"], "bipartite":{"partition":"topology", "bqf":{"coefficients":[0,0,0], "form":"0", "signature":"identity"}}}
+{"id":"projective-completion", "type":"boundary", "structure":"S7", "ports":"all", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+{"id":"stratification", "type":"edge", "from":"#8D-affine", "to":"#projective-completion", "operator":"∂", "bipartite":{"type":"vertical", "mapping":"affine→projective", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+{"id":"uri-scheme", "type":"metadata", "schläfli":"{n1,n2,n3,n4,n5,n6,n7,n8}", "betti":"{b0,b1,b2}", "polynomial":"ax²+bxy+cy²", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+

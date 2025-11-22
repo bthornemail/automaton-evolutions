@@ -1,0 +1,9 @@
+@version 1.0
+@schema metaverse-centroid-v1
+@dimension 8D
+
+{"id":"statistical-center", "type":"centroid", "dimension":8, "coordinates":{"x":0, "y":0, "z":0, "w":0, "u":0, "v":0, "s":0, "t":0}, "bipartite":{"partition":"topology", "bqf":{"coefficients":[0.5,0.5,0.5], "form":"0.5x²+0.5xy+0.5y²", "signature":"balance"}}}
+{"id":"anomaly-detection", "type":"detector", "method":"statistical-deviation", "threshold":2.0, "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"centroid-computation", "type":"function", "r5rs-call":"(define (compute-centroid points) (polynomial-mean points))", "bipartite":{"partition":"system", "bqf":{"coefficients":[0.5,0.5,0.5], "form":"0.5x²+0.5xy+0.5y²", "signature":"balance"}}}
+{"id":"link:statistical-center→anomaly-detection", "type":"edge", "from":"#statistical-center", "to":"#anomaly-detection", "label":"enables", "bipartite":{"type":"horizontal", "mapping":"centroid→detection", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+

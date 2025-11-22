@@ -1,0 +1,55 @@
+@version 1.0
+@schema university-v1
+@dimension 0D
+@branch 01-ontology
+
+{"id":"Knowledege", "type":"node", "encoding":"JSON", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Experience", "type":"node", "encoding":"JSON", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Professor", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Observer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Scholar", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Question", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Answer", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Key", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Test", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Delegate", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Verification", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Objective", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Task", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Exam", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Course", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Registration", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Transcript", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Registry", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"College", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"University2D", "type":"node", "encoding":"Typescript", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Achievement", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Assesment", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Enrollment", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Submission", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+
+{"id":"edge:Professor→Course", "type":"edge", "fromNode":"Professor", "toNode":"Course", "bipartite":{"type":"horizontal", "mapping":"professor→course", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Scholar→Course", "type":"edge", "fromNode":"Scholar", "toNode":"Course", "bipartite":{"type":"horizontal", "mapping":"scholar→course", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Question→Test", "type":"edge", "fromNode":"Question", "toNode":"Test", "bipartite":{"type":"horizontal", "mapping":"question→test", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Answer→Key", "type":"edge", "fromNode":"Answer", "toNode":"Key", "bipartite":{"type":"horizontal", "mapping":"answer→key", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Key→Test", "type":"edge", "fromNode":"Key", "toNode":"Test", "bipartite":{"type":"horizontal", "mapping":"key→test", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Test→Exam", "type":"edge", "fromNode":"Test", "toNode":"Exam", "bipartite":{"type":"horizontal", "mapping":"test→exam", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Registry→Observer", "type":"edge", "fromNode":"Registry", "toNode":"Observer", "bipartite":{"type":"horizontal", "mapping":"registry→observer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Observer→Experience", "type":"edge", "fromNode":"Observer", "toNode":"Experience", "bipartite":{"type":"horizontal", "mapping":"observer→experience", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Observer→Knowledege", "type":"edge", "fromNode":"Observer", "toNode":"Knowledege", "bipartite":{"type":"horizontal", "mapping":"observer→knowledge", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Delegate→Verification", "type":"edge", "fromNode":"Delegate", "toNode":"Verification", "bipartite":{"type":"horizontal", "mapping":"delegate→verification", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Verification→Objective", "type":"edge", "fromNode":"Verification", "toNode":"Objective", "bipartite":{"type":"horizontal", "mapping":"verification→objective", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Objective→Task", "type":"edge", "fromNode":"Objective", "toNode":"Task", "bipartite":{"type":"horizontal", "mapping":"objective→task", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Task→Exam", "type":"edge", "fromNode":"Task", "toNode":"Exam", "bipartite":{"type":"horizontal", "mapping":"task→exam", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Exam→Enrollment", "type":"edge", "fromNode":"Exam", "toNode":"Enrollment", "bipartite":{"type":"horizontal", "mapping":"exam→enrollment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Enrollment→Submission", "type":"edge", "fromNode":"Enrollment", "toNode":"Submission", "bipartite":{"type":"horizontal", "mapping":"enrollment→submission", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Submission→Assesment", "type":"edge", "fromNode":"Submission", "toNode":"Assesment", "bipartite":{"type":"horizontal", "mapping":"submission→assessment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Assesment→Achievement", "type":"edge", "fromNode":"Assesment", "toNode":"Achievement", "bipartite":{"type":"horizontal", "mapping":"assessment→achievement", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Achievement→Transcript", "type":"edge", "fromNode":"Achievement", "toNode":"Transcript", "bipartite":{"type":"horizontal", "mapping":"achievement→transcript", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Transcript→Registry", "type":"edge", "fromNode":"Transcript", "toNode":"Registry", "bipartite":{"type":"horizontal", "mapping":"transcript→registry", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Course→Registration", "type":"edge", "fromNode":"Course", "toNode":"Registration", "bipartite":{"type":"horizontal", "mapping":"course→registration", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Registration→Registry", "type":"edge", "fromNode":"Registration", "toNode":"Registry", "bipartite":{"type":"horizontal", "mapping":"registration→registry", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Registry→College", "type":"edge", "fromNode":"Registry", "toNode":"College", "bipartite":{"type":"horizontal", "mapping":"registry→college", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:College→University2D", "type":"edge", "fromNode":"College", "toNode":"University2D", "bipartite":{"type":"horizontal", "mapping":"college→university", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:University2D→University2D", "type":"edge", "fromNode":"University2D", "toNode":"University2D", "bipartite":{"type":"horizontal", "mapping":"university→university", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+

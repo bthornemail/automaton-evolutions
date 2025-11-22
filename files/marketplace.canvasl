@@ -1,0 +1,182 @@
+@version 1.0
+@schema marketplace-v1
+@dimension 0D
+@branch 01-ontology
+
+{"id":"Person", "type":"node", "encoding":"Person", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Path", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Bytes", "type":"node", "encoding":"Bytes", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"String", "type":"node", "encoding":"Bytes", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Function", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Encode", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Set", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Post", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Get", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"View", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Environment", "type":"node", "encoding":"Typescript", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Identity", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Peer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Connection", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Network", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Domain", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Encrypt", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Decrypt", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Sign", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Verify", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Signature", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Address", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Wallet", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Token", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Transaction", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Account", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Ledger", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Blockchain", "type":"node", "encoding":"Typescript", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Publisher", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Publish", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Publication", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Subscriber", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Subscribe", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Subscription", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Client", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Message", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Payload", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Broadcast", "type":"node", "encoding":"Function", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Topic", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Chat", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Owner", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Asset", "type":"node", "encoding":"JSON", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Author", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Title", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Summary", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Description", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Image", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Value", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Content", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Listing", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Loan", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Escrow", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Requirement", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Trade", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Service", "type":"node", "encoding":"JSON", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Consumer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Provider", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Customer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Order", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Confirmation", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Consideration", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Declaration", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Announcement", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Contractor", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Contract", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Fulfillment", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Agreement", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Negotiation", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Offer", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Knowledege", "type":"node", "encoding":"JSON", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Experience", "type":"node", "encoding":"JSON", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Professor", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Observer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Scholar", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Question", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Answer", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Key", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Test", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Delegate", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Verification", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Objective", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Task", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Exam", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Course", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Registration", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Transcript", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Registry", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"College", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"University2D", "type":"node", "encoding":"Typescript", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Achievement", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Assesment", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Enrollment", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Submission", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+
+{"id":"edge:Person→Environment", "type":"edge", "fromNode":"Person", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"person→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Bytes→Encode", "type":"edge", "fromNode":"Bytes", "toNode":"Encode", "bipartite":{"type":"horizontal", "mapping":"bytes→encode", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:String→Encode", "type":"edge", "fromNode":"String", "toNode":"Encode", "bipartite":{"type":"horizontal", "mapping":"string→encode", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Function→Encode", "type":"edge", "fromNode":"Function", "toNode":"Encode", "bipartite":{"type":"horizontal", "mapping":"function→encode", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Encode→Environment", "type":"edge", "fromNode":"Encode", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"encode→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Set→Path", "type":"edge", "fromNode":"Set", "toNode":"Path", "bipartite":{"type":"horizontal", "mapping":"set→path", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Post→Path", "type":"edge", "fromNode":"Post", "toNode":"Path", "bipartite":{"type":"horizontal", "mapping":"post→path", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Get→Path", "type":"edge", "fromNode":"Get", "toNode":"Path", "bipartite":{"type":"horizontal", "mapping":"get→path", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:View→Path", "type":"edge", "fromNode":"View", "toNode":"Path", "bipartite":{"type":"horizontal", "mapping":"view→path", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Path→Environment", "type":"edge", "fromNode":"Path", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"path→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Identity→Peer", "type":"edge", "fromNode":"Identity", "toNode":"Peer", "bipartite":{"type":"horizontal", "mapping":"identity→peer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Peer→Connection", "type":"edge", "fromNode":"Peer", "toNode":"Connection", "bipartite":{"type":"horizontal", "mapping":"peer→connection", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Connection→Network", "type":"edge", "fromNode":"Connection", "toNode":"Network", "bipartite":{"type":"horizontal", "mapping":"connection→network", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Network→Domain", "type":"edge", "fromNode":"Network", "toNode":"Domain", "bipartite":{"type":"horizontal", "mapping":"network→domain", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Signature→Transaction", "type":"edge", "fromNode":"Signature", "toNode":"Transaction", "bipartite":{"type":"horizontal", "mapping":"signature→transaction", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Token→Transaction", "type":"edge", "fromNode":"Token", "toNode":"Transaction", "bipartite":{"type":"horizontal", "mapping":"token→transaction", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Transaction→Account", "type":"edge", "fromNode":"Transaction", "toNode":"Account", "bipartite":{"type":"horizontal", "mapping":"transaction→account", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Account→Ledger", "type":"edge", "fromNode":"Account", "toNode":"Ledger", "bipartite":{"type":"horizontal", "mapping":"account→ledger", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Ledger→Blockchain", "type":"edge", "fromNode":"Ledger", "toNode":"Blockchain", "bipartite":{"type":"horizontal", "mapping":"ledger→blockchain", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Sign→Wallet", "type":"edge", "fromNode":"Sign", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"sign→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Verify→Wallet", "type":"edge", "fromNode":"Verify", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"verify→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Encrypt→Wallet", "type":"edge", "fromNode":"Encrypt", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"encrypt→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Decrypt→Wallet", "type":"edge", "fromNode":"Decrypt", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"decrypt→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Wallet→Address", "type":"edge", "fromNode":"Wallet", "toNode":"Address", "bipartite":{"type":"horizontal", "mapping":"wallet→address", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Address→Blockchain", "type":"edge", "fromNode":"Address", "toNode":"Blockchain", "bipartite":{"type":"horizontal", "mapping":"address→blockchain", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Publisher→Publish", "type":"edge", "fromNode":"Publisher", "toNode":"Publish", "bipartite":{"type":"horizontal", "mapping":"publisher→publish", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Publish→Publication", "type":"edge", "fromNode":"Publish", "toNode":"Publication", "bipartite":{"type":"horizontal", "mapping":"publish→publication", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Publication→Topic", "type":"edge", "fromNode":"Publication", "toNode":"Topic", "bipartite":{"type":"horizontal", "mapping":"publication→topic", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Subscriber→Subscribe", "type":"edge", "fromNode":"Subscriber", "toNode":"Subscribe", "bipartite":{"type":"horizontal", "mapping":"subscriber→subscribe", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Subscribe→Subscription", "type":"edge", "fromNode":"Subscribe", "toNode":"Subscription", "bipartite":{"type":"horizontal", "mapping":"subscribe→subscription", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Subscription→Topic", "type":"edge", "fromNode":"Subscription", "toNode":"Topic", "bipartite":{"type":"horizontal", "mapping":"subscription→topic", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Client→Message", "type":"edge", "fromNode":"Client", "toNode":"Message", "bipartite":{"type":"horizontal", "mapping":"client→message", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Message→Payload", "type":"edge", "fromNode":"Message", "toNode":"Payload", "bipartite":{"type":"horizontal", "mapping":"message→payload", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Payload→Broadcast", "type":"edge", "fromNode":"Payload", "toNode":"Broadcast", "bipartite":{"type":"horizontal", "mapping":"payload→broadcast", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Broadcast→Topic", "type":"edge", "fromNode":"Broadcast", "toNode":"Topic", "bipartite":{"type":"horizontal", "mapping":"broadcast→topic", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Topic→Chat", "type":"edge", "fromNode":"Topic", "toNode":"Chat", "bipartite":{"type":"horizontal", "mapping":"topic→chat", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Author→Content", "type":"edge", "fromNode":"Author", "toNode":"Content", "bipartite":{"type":"horizontal", "mapping":"author→content", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Title→Content", "type":"edge", "fromNode":"Title", "toNode":"Content", "bipartite":{"type":"horizontal", "mapping":"title→content", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Summary→Content", "type":"edge", "fromNode":"Summary", "toNode":"Content", "bipartite":{"type":"horizontal", "mapping":"summary→content", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Description→Content", "type":"edge", "fromNode":"Description", "toNode":"Content", "bipartite":{"type":"horizontal", "mapping":"description→content", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Image→Content", "type":"edge", "fromNode":"Image", "toNode":"Content", "bipartite":{"type":"horizontal", "mapping":"image→content", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Value→Content", "type":"edge", "fromNode":"Value", "toNode":"Content", "bipartite":{"type":"horizontal", "mapping":"value→content", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Content→Listing", "type":"edge", "fromNode":"Content", "toNode":"Listing", "bipartite":{"type":"horizontal", "mapping":"content→listing", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Listing→Asset", "type":"edge", "fromNode":"Listing", "toNode":"Asset", "bipartite":{"type":"horizontal", "mapping":"listing→asset", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Asset→Owner", "type":"edge", "fromNode":"Asset", "toNode":"Owner", "bipartite":{"type":"horizontal", "mapping":"asset→owner", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Consumer→Customer", "type":"edge", "fromNode":"Consumer", "toNode":"Customer", "bipartite":{"type":"horizontal", "mapping":"consumer→customer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Customer→Order", "type":"edge", "fromNode":"Customer", "toNode":"Order", "bipartite":{"type":"horizontal", "mapping":"customer→order", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Order→Confirmation", "type":"edge", "fromNode":"Order", "toNode":"Confirmation", "bipartite":{"type":"horizontal", "mapping":"order→confirmation", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Confirmation→Consideration", "type":"edge", "fromNode":"Confirmation", "toNode":"Consideration", "bipartite":{"type":"horizontal", "mapping":"confirmation→consideration", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Consideration→Declaration", "type":"edge", "fromNode":"Consideration", "toNode":"Declaration", "bipartite":{"type":"horizontal", "mapping":"consideration→declaration", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Declaration→Announcement", "type":"edge", "fromNode":"Declaration", "toNode":"Announcement", "bipartite":{"type":"horizontal", "mapping":"declaration→announcement", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Announcement→Service", "type":"edge", "fromNode":"Announcement", "toNode":"Service", "bipartite":{"type":"horizontal", "mapping":"announcement→service", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Provider→Contractor", "type":"edge", "fromNode":"Provider", "toNode":"Contractor", "bipartite":{"type":"horizontal", "mapping":"provider→contractor", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Contractor→Contract", "type":"edge", "fromNode":"Contractor", "toNode":"Contract", "bipartite":{"type":"horizontal", "mapping":"contractor→contract", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Contract→Fulfillment", "type":"edge", "fromNode":"Contract", "toNode":"Fulfillment", "bipartite":{"type":"horizontal", "mapping":"contract→fulfillment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Fulfillment→Agreement", "type":"edge", "fromNode":"Fulfillment", "toNode":"Agreement", "bipartite":{"type":"horizontal", "mapping":"fulfillment→agreement", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Agreement→Negotiation", "type":"edge", "fromNode":"Agreement", "toNode":"Negotiation", "bipartite":{"type":"horizontal", "mapping":"agreement→negotiation", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Negotiation→Offer", "type":"edge", "fromNode":"Negotiation", "toNode":"Offer", "bipartite":{"type":"horizontal", "mapping":"negotiation→offer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Offer→Service", "type":"edge", "fromNode":"Offer", "toNode":"Service", "bipartite":{"type":"horizontal", "mapping":"offer→service", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Professor→Course", "type":"edge", "fromNode":"Professor", "toNode":"Course", "bipartite":{"type":"horizontal", "mapping":"professor→course", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Scholar→Course", "type":"edge", "fromNode":"Scholar", "toNode":"Course", "bipartite":{"type":"horizontal", "mapping":"scholar→course", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Question→Test", "type":"edge", "fromNode":"Question", "toNode":"Test", "bipartite":{"type":"horizontal", "mapping":"question→test", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Answer→Key", "type":"edge", "fromNode":"Answer", "toNode":"Key", "bipartite":{"type":"horizontal", "mapping":"answer→key", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Key→Test", "type":"edge", "fromNode":"Key", "toNode":"Test", "bipartite":{"type":"horizontal", "mapping":"key→test", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Test→Exam", "type":"edge", "fromNode":"Test", "toNode":"Exam", "bipartite":{"type":"horizontal", "mapping":"test→exam", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Registry→Observer", "type":"edge", "fromNode":"Registry", "toNode":"Observer", "bipartite":{"type":"horizontal", "mapping":"registry→observer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Observer→Experience", "type":"edge", "fromNode":"Observer", "toNode":"Experience", "bipartite":{"type":"horizontal", "mapping":"observer→experience", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Observer→Knowledege", "type":"edge", "fromNode":"Observer", "toNode":"Knowledege", "bipartite":{"type":"horizontal", "mapping":"observer→knowledege", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Delegate→Verification", "type":"edge", "fromNode":"Delegate", "toNode":"Verification", "bipartite":{"type":"horizontal", "mapping":"delegate→verification", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Verification→Objective", "type":"edge", "fromNode":"Verification", "toNode":"Objective", "bipartite":{"type":"horizontal", "mapping":"verification→objective", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Objective→Task", "type":"edge", "fromNode":"Objective", "toNode":"Task", "bipartite":{"type":"horizontal", "mapping":"objective→task", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Task→Exam", "type":"edge", "fromNode":"Task", "toNode":"Exam", "bipartite":{"type":"horizontal", "mapping":"task→exam", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Exam→Enrollment", "type":"edge", "fromNode":"Exam", "toNode":"Enrollment", "bipartite":{"type":"horizontal", "mapping":"exam→enrollment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Enrollment→Submission", "type":"edge", "fromNode":"Enrollment", "toNode":"Submission", "bipartite":{"type":"horizontal", "mapping":"enrollment→submission", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Submission→Assesment", "type":"edge", "fromNode":"Submission", "toNode":"Assesment", "bipartite":{"type":"horizontal", "mapping":"submission→assesment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Assesment→Achievement", "type":"edge", "fromNode":"Assesment", "toNode":"Achievement", "bipartite":{"type":"horizontal", "mapping":"assesment→achievement", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Achievement→Transcript", "type":"edge", "fromNode":"Achievement", "toNode":"Transcript", "bipartite":{"type":"horizontal", "mapping":"achievement→transcript", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Transcript→Registry", "type":"edge", "fromNode":"Transcript", "toNode":"Registry", "bipartite":{"type":"horizontal", "mapping":"transcript→registry", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Course→Registration", "type":"edge", "fromNode":"Course", "toNode":"Registration", "bipartite":{"type":"horizontal", "mapping":"course→registration", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Registration→Registry", "type":"edge", "fromNode":"Registration", "toNode":"Registry", "bipartite":{"type":"horizontal", "mapping":"registration→registry", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Registry→College", "type":"edge", "fromNode":"Registry", "toNode":"College", "bipartite":{"type":"horizontal", "mapping":"registry→college", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:College→University2D", "type":"edge", "fromNode":"College", "toNode":"University2D", "bipartite":{"type":"horizontal", "mapping":"college→university2d", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:University2D→University2D", "type":"edge", "fromNode":"University2D", "toNode":"University2D", "bipartite":{"type":"horizontal", "mapping":"university2d→university2d", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}

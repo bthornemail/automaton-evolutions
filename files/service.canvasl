@@ -1,0 +1,36 @@
+@version 1.0
+@schema service-v1
+@dimension 0D
+@branch 01-ontology
+
+{"id":"Service", "type":"node", "encoding":"JSON", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Consumer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Provider", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Customer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Order", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Confirmation", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Consideration", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Declaration", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Announcement", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Contractor", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Contract", "type":"node", "encoding":"CID", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Fulfillment", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Agreement", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Negotiation", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Offer", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+
+{"id":"edge:Consumer→Customer", "type":"edge", "fromNode":"Consumer", "toNode":"Customer", "bipartite":{"type":"horizontal", "mapping":"consumer→customer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Customer→Order", "type":"edge", "fromNode":"Customer", "toNode":"Order", "bipartite":{"type":"horizontal", "mapping":"customer→order", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Order→Confirmation", "type":"edge", "fromNode":"Order", "toNode":"Confirmation", "bipartite":{"type":"horizontal", "mapping":"order→confirmation", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Confirmation→Consideration", "type":"edge", "fromNode":"Confirmation", "toNode":"Consideration", "bipartite":{"type":"horizontal", "mapping":"confirmation→consideration", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Consideration→Declaration", "type":"edge", "fromNode":"Consideration", "toNode":"Declaration", "bipartite":{"type":"horizontal", "mapping":"consideration→declaration", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Declaration→Announcement", "type":"edge", "fromNode":"Declaration", "toNode":"Announcement", "bipartite":{"type":"horizontal", "mapping":"declaration→announcement", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Announcement→Service", "type":"edge", "fromNode":"Announcement", "toNode":"Service", "bipartite":{"type":"horizontal", "mapping":"announcement→service", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Provider→Contractor", "type":"edge", "fromNode":"Provider", "toNode":"Contractor", "bipartite":{"type":"horizontal", "mapping":"provider→contractor", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Contractor→Contract", "type":"edge", "fromNode":"Contractor", "toNode":"Contract", "bipartite":{"type":"horizontal", "mapping":"contractor→contract", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Contract→Fulfillment", "type":"edge", "fromNode":"Contract", "toNode":"Fulfillment", "bipartite":{"type":"horizontal", "mapping":"contract→fulfillment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Fulfillment→Agreement", "type":"edge", "fromNode":"Fulfillment", "toNode":"Agreement", "bipartite":{"type":"horizontal", "mapping":"fulfillment→agreement", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Agreement→Negotiation", "type":"edge", "fromNode":"Agreement", "toNode":"Negotiation", "bipartite":{"type":"horizontal", "mapping":"agreement→negotiation", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Negotiation→Offer", "type":"edge", "fromNode":"Negotiation", "toNode":"Offer", "bipartite":{"type":"horizontal", "mapping":"negotiation→offer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Offer→Service", "type":"edge", "fromNode":"Offer", "toNode":"Service", "bipartite":{"type":"horizontal", "mapping":"offer→service", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+

@@ -1,0 +1,11 @@
+@version 1.0
+@schema metaverse-system-v1
+@dimension 8D
+@include service.canvasl
+@include marketplace.canvasl
+@include university.canvasl
+
+{"id":"right-bipartition", "type":"bipartition", "side":"right", "description":"Pure projective / LCM / what things DO", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+{"id":"system-strata", "type":"strata", "includes":["service.canvasl", "marketplace.canvasl", "university.canvasl"], "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"link:right-bipartition→system-strata", "type":"edge", "from":"#right-bipartition", "to":"#system-strata", "label":"contains", "bipartite":{"type":"horizontal", "mapping":"bipartition→strata", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+

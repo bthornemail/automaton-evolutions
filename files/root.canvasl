@@ -1,0 +1,48 @@
+@version 1.0
+@schema root-v1
+@dimension 0D
+@branch 01-ontology
+
+{"id":"Person", "type":"node", "encoding":"Intelligence", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"identity"}}}
+{"id":"Path", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+{"id":"Bytes", "type":"node", "encoding":"UInt8Array", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+{"id":"String", "type":"node", "encoding":"Bytes", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Function", "type":"node", "encoding":"String", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Encode", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Set", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Post", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Get", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"View", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Encrypt", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Decrypt", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Sign", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Verify", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Signature", "type":"node", "encoding":"Signature", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Address", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Wallet", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Peer", "type":"node", "encoding":"Address", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Connection", "type":"node", "encoding":"Map", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Network", "type":"node", "encoding":"Function", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Domain", "type":"node", "encoding":"String", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"Environment", "type":"node", "encoding":"Typescript", "bipartite":{"partition":"system", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+
+{"id":"edge:Sign→Signature", "type":"edge", "fromNode":"Sign", "toNode":"Signature", "bipartite":{"type":"horizontal", "mapping":"function→signature", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Signature→Verify", "type":"edge", "fromNode":"Signature", "toNode":"Verify", "bipartite":{"type":"horizontal", "mapping":"signature→verification", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Verify→Wallet", "type":"edge", "fromNode":"Verify", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"verification→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Encrypt→Wallet", "type":"edge", "fromNode":"Encrypt", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"encryption→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Decrypt→Wallet", "type":"edge", "fromNode":"Decrypt", "toNode":"Wallet", "bipartite":{"type":"horizontal", "mapping":"decryption→wallet", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Wallet→Address", "type":"edge", "fromNode":"Wallet", "toNode":"Address", "bipartite":{"type":"horizontal", "mapping":"wallet→address", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Address→Peer", "type":"edge", "fromNode":"Address", "toNode":"Peer", "bipartite":{"type":"horizontal", "mapping":"address→peer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Peer→Connection", "type":"edge", "fromNode":"Peer", "toNode":"Connection", "bipartite":{"type":"horizontal", "mapping":"peer→connection", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Connection→Network", "type":"edge", "fromNode":"Connection", "toNode":"Network", "bipartite":{"type":"horizontal", "mapping":"connection→network", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Network→Domain", "type":"edge", "fromNode":"Network", "toNode":"Domain", "bipartite":{"type":"horizontal", "mapping":"network→domain", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Domain→Environment", "type":"edge", "fromNode":"Domain", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"domain→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Set→Environment", "type":"edge", "fromNode":"Set", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"function→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Post→Environment", "type":"edge", "fromNode":"Post", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"function→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Get→Environment", "type":"edge", "fromNode":"Get", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"function→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:View→Environment", "type":"edge", "fromNode":"View", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"function→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Person→String", "type":"edge", "fromNode":"Person", "toNode":"String", "bipartite":{"type":"horizontal", "mapping":"person→string", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:String→Encode", "type":"edge", "fromNode":"String", "toNode":"Encode", "bipartite":{"type":"horizontal", "mapping":"string→encode", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Encode→Path", "type":"edge", "fromNode":"Encode", "toNode":"Path", "bipartite":{"type":"horizontal", "mapping":"encode→path", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"edge:Path→Environment", "type":"edge", "fromNode":"Path", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"path→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+

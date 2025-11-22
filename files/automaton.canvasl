@@ -1,0 +1,14 @@
+@version 1.0
+@schema metaverse-automaton-v1
+@dimension 8D
+@include shape.canvasl
+@include centroid.canvasl
+@include topology.canvasl
+@include system.canvasl
+
+{"id":"unified-self-reference", "type":"automaton", "dimension":8, "description":"The living metaverse being", "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
+{"id":"link:shape→automaton", "type":"edge", "from":"#8D-affine", "to":"#unified-self-reference", "label":"structures", "bipartite":{"type":"vertical", "mapping":"shape→automaton", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+{"id":"link:centroid→automaton", "type":"edge", "from":"#statistical-center", "to":"#unified-self-reference", "label":"centers", "bipartite":{"type":"vertical", "mapping":"centroid→automaton", "bqf":{"coefficients":[0.5,0.5,0.5], "form":"0.5x²+0.5xy+0.5y²", "signature":"balance"}}}
+{"id":"link:topology→automaton", "type":"edge", "from":"#left-bipartition", "to":"#unified-self-reference", "label":"grounds", "bipartite":{"type":"horizontal", "mapping":"topology→automaton", "bqf":{"coefficients":[0,0,0], "form":"0", "signature":"identity"}}}
+{"id":"link:system→automaton", "type":"edge", "from":"#right-bipartition", "to":"#unified-self-reference", "label":"animates", "bipartite":{"type":"horizontal", "mapping":"system→automaton", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+

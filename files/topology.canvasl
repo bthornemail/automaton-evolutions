@@ -1,0 +1,10 @@
+@version 1.0
+@schema metaverse-topology-v1
+@dimension 8D
+@include root.canvasl
+@include token.canvasl
+
+{"id":"left-bipartition", "type":"bipartition", "side":"left", "description":"Pure affine / GCD / what things ARE", "bipartite":{"partition":"topology", "bqf":{"coefficients":[0,0,0], "form":"0", "signature":"identity"}}}
+{"id":"topology-strata", "type":"strata", "includes":["root.canvasl", "token.canvasl"], "bipartite":{"partition":"topology", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+{"id":"link:left-bipartition→topology-strata", "type":"edge", "from":"#left-bipartition", "to":"#topology-strata", "label":"contains", "bipartite":{"type":"horizontal", "mapping":"bipartition→strata", "bqf":{"coefficients":[1,0,0], "form":"x²", "signature":"successor"}}}
+
