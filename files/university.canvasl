@@ -53,3 +53,4 @@
 {"id":"edge:College→University2D", "type":"edge", "fromNode":"College", "toNode":"University2D", "bipartite":{"type":"horizontal", "mapping":"college→university", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 {"id":"edge:University2D→University2D", "type":"edge", "fromNode":"University2D", "toNode":"University2D", "bipartite":{"type":"horizontal", "mapping":"university→university", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 
+

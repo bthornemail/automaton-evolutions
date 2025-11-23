@@ -28,3 +28,4 @@
 {"id":"edge:Wallet→Address", "type":"edge", "fromNode":"Wallet", "toNode":"Address", "bipartite":{"type":"horizontal", "mapping":"wallet→address", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 {"id":"edge:Address→Blockchain", "type":"edge", "fromNode":"Address", "toNode":"Blockchain", "bipartite":{"type":"horizontal", "mapping":"address→blockchain", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 
+

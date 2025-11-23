@@ -46,3 +46,4 @@
 {"id":"edge:Encode→Path", "type":"edge", "fromNode":"Encode", "toNode":"Path", "bipartite":{"type":"horizontal", "mapping":"encode→path", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 {"id":"edge:Path→Environment", "type":"edge", "fromNode":"Path", "toNode":"Environment", "bipartite":{"type":"horizontal", "mapping":"path→environment", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 
+

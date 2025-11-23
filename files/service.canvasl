@@ -34,3 +34,4 @@
 {"id":"edge:Negotiation→Offer", "type":"edge", "fromNode":"Negotiation", "toNode":"Offer", "bipartite":{"type":"horizontal", "mapping":"negotiation→offer", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 {"id":"edge:Offer→Service", "type":"edge", "fromNode":"Offer", "toNode":"Service", "bipartite":{"type":"horizontal", "mapping":"offer→service", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 
+
