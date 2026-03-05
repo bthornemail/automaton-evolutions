@@ -35,3 +35,6 @@
 {"id":"edge:Offer→Service", "type":"edge", "fromNode":"Offer", "toNode":"Service", "bipartite":{"type":"horizontal", "mapping":"offer→service", "bqf":{"coefficients":[1,1,1], "form":"x²+xy+y²", "signature":"pairing"}}}
 
 
+
+
+
